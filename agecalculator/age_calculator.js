@@ -6,13 +6,13 @@ function age() {
     var today_Date = date.getDate();  
     var today_Month = 1+date.getMonth();  
     var today_Year = date.getFullYear();
-
+    var month = [31,28,31,30,31,30,31,31,30,31,30,31];
     if(birthday_Date>today_Date){
         today_Date = today_Date + month[today_Month - 1];
         today_Month = today_Month - 1;
     }
-    if(today_Month>birthday_Month){
-        birthday_Month = birthday_Month + 12;
+    if(birthday_Month>today_Month){
+        today_Month = today_Month + 12;
         today_Year = today_Year -1;
     }
       
